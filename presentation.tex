@@ -1,0 +1,168 @@
+\documentclass{beamer}
+\usepackage{listings}
+\usecolortheme{whale}
+\title{Creating presentation using \textbf{Latex}}
+
+\begin{document}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Beamer class}
+		\begin{Large}		
+		\begin{itemize}
+			\item To start our presentation we need to set the document class to beamer.
+			\item Syntax:\\\Large
+			\begin{verbatim}
+			\documentclass{beamer}
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Adding slides}
+		\begin{Large}		
+		\begin{itemize}
+			\item To add slides in we use the frame environment..
+			\item Syntax:\\\Large
+			\begin{verbatim}
+				\begin{frame}......\end{frame}
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}	
+	\begin{frame}[fragile]
+		\frametitle{Adding a titlepage}
+		\begin{Large}		
+		\begin{itemize}
+			\item On our title slide we need to add title, subtitle, author, institute and date information.
+			\item Syntax:\\\Large
+			\begin{verbatim}
+				\title{<Title>}
+				\subtitle{<Subtitle>}
+				\author{<Author Name>}
+				\institute{<Institute Name>}
+				\date{\today}
+			
+			To make this work we use:
+				\titlepage
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Lists}
+		\begin{Large}		
+		\begin{itemize}
+			\item Lists are a common way to present information in presentations and they're very easy to set up.
+			\item Syntax:\\\Large
+			\begin{verbatim}
+				\begin{itemize}.....\end{itemize}
+			\end{verbatim}
+			\item To set up different bullets we use:
+			\begin{verbatim}
+				...\item
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Pictures}
+		\begin{Large}
+		\begin{itemize}
+			\item To add figure we use\\\Large
+			\begin{verbatim}
+				\begin{figure}.....\end{figure}
+			\end{verbatim}
+			\item To specify file name and caption for image we use
+			\begin{verbatim}
+				\includegraphics[scale=0.5]{<figure_name>}
+				\caption{<caption_name>}
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Themes}
+		\begin{Large}
+		\begin{itemize}
+			\item To add themes we use\\\Large
+			\begin{verbatim}
+				\usetheme  or \usecolortheme
+			\end{verbatim}
+			\item Different themes available:
+				\begin{itemize}
+				\item Boadilla,Madrid,Antibes,Hannover,etc
+				\end{itemize}
+			\item Different colorthemes available:
+				\begin{itemize}
+				\item \begin{verbatim} http://deic.uab.es/~iblanes/
+				beamer_gallery/index_by_color.html 
+				\end{verbatim}
+				\end{itemize}		
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Mathematical Equation}
+		\begin{Large}
+		\begin{itemize}
+			\item Basic equations in LATEX can be easily "programmed"
+			\item To put your equations in inline mode use one of these delimiters:
+			\begin{verbatim}
+			\( \), $ $ or \begin{math} \end{math}.
+			\end{verbatim}
+			They all work and the choice is a matter of taste.
+			
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\begin{Large}
+		\begin{itemize}
+			\item For Example:
+			\(x^2 + y^2 = z^2\) \\
+			i.e Pythagoras theorem is written in Latex as \\
+			\begin{verbatim}
+			\(x^2 + y^2 = z^2\)
+			\end{verbatim}
+			\item Also complex equations:
+			$$\int_{a}^{b} x^2 dx$$ \\ as \\
+			\begin{verbatim}
+			$$\int_{a}^{b} x^2 dx$$
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\begin{Large}
+		\begin{itemize}
+			\item $$ d(x,y) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2} $$					$$ d(x,y) = \sum_{i=1}^{n} |p_i - q_i| $$
+			\item Also complex equations:
+			$$\int_{a}^{b} x^2 dx$$ \\ as \\
+			\begin{verbatim}
+			$$\int_{a}^{b} x^2 dx$$
+			\end{verbatim}
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+	\begin{frame}[fragile]
+		\frametitle{Biblography}
+		\begin{Large}
+		\begin{itemize}
+			\item For biblography we create a .bib file
+			\item We write citation details in that file
+			\item Then we use
+			\begin{verbatim}
+			\cite{citation name}
+			\end{verbatim}
+			where we want to give reference number and
+			\begin{verbatim}
+			\bibliography{file_name}
+			\bibliographystyle{ieeetr}
+			\end{verbatim}
+			at the end of file inside frame environment
+		\end{itemize}
+		\end{Large}
+	\end{frame}
+\end{document}
